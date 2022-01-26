@@ -26,7 +26,7 @@ git clone https://github.com/realrasengan/markdown.doctor
 - Press ^4 to start over
 - Every keypress triggers a localStorage save, so your work should be there when you return. [1]
 
-[1] localStorage isn't always persistent.  Make sure you save (^s) your work often!
+[1] localStorage isn't always persistent.  Make sure you save (^3) your work often!
 
 ## TODO
 
