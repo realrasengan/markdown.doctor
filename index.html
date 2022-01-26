@@ -1,0 +1,43 @@
+<html>
+ <head>
+  <title>markdown.doctor (md) editor</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+ </head>
+<body>
+<textarea id="editor"
+  contentEditable="true"
+  class="editBox editBoxTxt">
+</textarea>
+<div id="editor_preview"
+  contenteditable="true"
+  oncut="return false"
+  onpaste="return false"
+  style="user-drag: none;"
+  ondragenter="return false;" 
+  ondragleave="return false;" 
+  ondragover="return false;" 
+  ondrop="return false;"
+  class="editBox invisible">
+</div>
+<div class="bottom">
+<span>
+<b><b>CTRL</b></b>
++ 
+<b><b>[m]</b></b>: toggle marked
+&nbsp;
+<b><b>[i]</b></b>: invert colours
+&nbsp;
+<b><b>[s]</b></b>: download .md
+&nbsp;
+<b><b>[n]</b></b>: new file
+&nbsp;
+<b><b>[r]</b></b>: about
+</span>
+</div>
+<script src="js/index.js"></script>
+<script src="js/caret.js"></script>
+<script src="js/events.js"></script>
+</body>
+</html>
+

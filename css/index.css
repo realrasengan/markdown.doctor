@@ -1,0 +1,82 @@
+* {
+  color:#eee;
+  background-color:#111;
+}
+body {
+  background-color:inherit;
+  color:inherit;
+  margin:0px;
+  font-family:Helvetica, Verdana, Arial;
+  font-size:14px;
+}
+h1,h2,h3,h4,h5,h6,h7 {
+  background-color:inherit;
+  color:inherit;
+  margin: 0 2px 0 2px;
+}
+p,li,ul,b,i,u,pre,img,div,span,a {
+  background-color:inherit;
+  color:inherit;
+}
+code {
+  display:inline-block;
+  padding:4px;
+  background-color:#444;
+  color:#ccc;
+}
+.editBox {
+  background-color:inherit;
+  color:inherit;
+  position:fixed;
+  min-width:calc(100vw - 10px);
+  min-height:calc(100vh - 26px);
+  outline:0;
+  border:0;
+  overflow:scroll;
+  max-width:calc(100vw - 10px);
+  max-height:calc(100vh - 26px);
+  padding:5px;
+}
+.editBoxTxt {
+  min-width:100vw;
+  min-height:calc(100vh - 16px);
+  max-width:100vw;
+  max-height:calc(100vh - 16px);
+}
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+    -webkit-border-radius: 2ex;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #666;
+}
+
+.invisible {
+  display:none;
+}
+.bottom {
+  position:fixed;
+  bottom:0;
+  min-height:16px;
+  max-height:16px;
+  min-width:100%;
+  max-width:100%;
+  background-color:#888;
+  color:#000;
+}
+  .bottom span {
+    min-width:100%;
+    min-height:100%;
+    display:block;
+  }
+.inverted {
+  filter:invert(1);
+}
