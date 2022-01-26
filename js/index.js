@@ -29,6 +29,9 @@ function main(e) {
       case 'r':
         alert(aboutMsg);
         break;
+      case 'g':
+        window.open("https://github.com/realrasengan/markdown.doctor","_newwindow");
+        break;
       default:
         break;
     }
