@@ -11,25 +11,25 @@ function dom(id) { return document.getElementById(id) }
 function main(e) {
   if(e.ctrlKey) {
     switch(e.key) {
-      case 'm':
+      case '1':
         update();
         toggle();
         break;
-      case 'i':
+      case '2':
         invert();
         break;
-      case 's':
+      case '3':
         downloadFile();
         break;
-      case 'n':
+      case '4':
         let x = confirm("You will lose all the data you have put down here.  Are you sure?");
         if(x)
           newFile();
         break;
-      case 'r':
+      case '5':
         alert(aboutMsg);
         break;
-      case 'g':
+      case '6':
         window.open("https://github.com/realrasengan/markdown.doctor","_newwindow");
         break;
       default:

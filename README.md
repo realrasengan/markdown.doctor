@@ -20,10 +20,10 @@ git clone https://github.com/realrasengan/markdown.doctor
 
 ## Features
 
-- Press ^m to see a live preview
-- Press ^i to invert colors (light/dark mode)
-- Press ^s to download the .md file
-- Press ^n to start over
+- Press ^1 to see a live preview
+- Press ^2 to invert colors (light/dark mode)
+- Press ^3 to download the .md file
+- Press ^4 to start over
 - Every keypress triggers a localStorage save, so your work should be there when you return. [1]
 
 [1] localStorage isn't always persistent.  Make sure you save (^s) your work often!
