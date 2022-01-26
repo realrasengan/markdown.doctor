@@ -1,6 +1,6 @@
 const aboutMsg =
 `markdown.doctor (md) editor
-version 0.01 alpha
+version 0.02 alpha
 
 By Andrew Lee <andrew@imperialfamily.com>
 
@@ -8,6 +8,12 @@ MIT LICENSED
 `;
 
 function dom(id) { return document.getElementById(id) }
+function prepare(e) {
+  let pos = getCaretPosition('editor_preview');
+  let offset1 = calcOffset(pos[0]);
+  let offset2 = calcOffset(pos[1]);
+  setCaretPosition('editor',pos[0]+offset1,pos[1]+offset2);  
+}
 function main(e) {
   if(e.ctrlKey) {
     switch(e.key) {
@@ -41,7 +47,9 @@ function main(e) {
     update();
   }
 }
-function update() { setTimeout(()=>{ dom('editor_preview').innerHTML = marked.parse(dom('editor').value) },1) }
+function update() { 
+  dom('editor_preview').innerHTML = marked.parse(dom('editor').value);
+}
 function save() { window.localStorage.setItem('data',dom('editor').value) }
 function newFile() {
   window.localStorage.removeItem('data');
@@ -58,17 +66,18 @@ function downloadFile() {
   window.URL.revokeObjectURL(tmp.href);
   document.body.removeChild(tmp);
 }
+function isVisible() {
+  return !dom('editor_preview').classList.contains('invisible');
+}
 function toggle() {
-  setTimeout(()=>{
-    if(dom('editor_preview').classList.contains('invisible')) {
-      dom('editor_preview').classList.remove('invisible');
-      dom('editor_preview').scrollTop = dom('editor').scrollTop;
-    }
-    else {
-      dom('editor').scrollTop = dom('editor_preview').scrollTop;
-      dom('editor_preview').classList.add('invisible');
-    }
-  },1);
+  if(dom('editor_preview').classList.contains('invisible')) {
+    dom('editor_preview').classList.remove('invisible');
+    dom('editor_preview').scrollTop = dom('editor').scrollTop;
+  }
+  else {
+    dom('editor').scrollTop = dom('editor_preview').scrollTop;
+    dom('editor_preview').classList.add('invisible');
+  }
 }
 function invert() {
   if(!document.body.classList.contains('inverted'))
