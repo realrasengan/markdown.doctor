@@ -5,6 +5,10 @@ I was looking for a nice markdown editor, and I couldn't find one that did all t
 
 ## Installation
 
+1. Visit [markdown.doctor](https://markdown.doctor/)
+
+or
+
 1. Download from git
 ```
 git clone https://github.com/realrasengan/markdown.doctor
